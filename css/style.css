@@ -151,9 +151,9 @@ ul >li {
 }
 
 /* ==============================
-Medium devices (800px and larger)
+Medium devices (1000px and larger)
 ================================= */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1023px) {
 
 header {
   text-align: unset;
@@ -216,6 +216,10 @@ header {
 }
 
 .col-lg-9 {
+  width: 49%;
+  margin-left: 1%;
+}
+.col-lg-9 {
   width: 70%;
   margin-left: 1%;
 }
@@ -226,15 +230,44 @@ header {
 }
 
 /* animation */
-.star {
-  animation: rotation 15s infinite;
+@keyframes scoop-move {
+  from {transform: translate(0px,-150px);}
+  to {transform: translate(0px,0px);}
+}
+.scoop {
+  animation-duration: 0.5s;
+  animation-name: scoop-move;
+  animation-timing-function: linear;
 }
 
-@keyframes star {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
+
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
 }
