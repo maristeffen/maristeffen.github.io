@@ -21,21 +21,21 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 700;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.3em;
   font-weight: 700;
 }
 
 h4 {
-  font-size: 1.0em;
+  font-size: 1.25em;
   font-weight: 700;
-  margin-bottom: -12px;
-  line-height: 1.0em;
+  margin-bottom: -10px;
+  line-height: 1.2em;
 }
 
 img {
@@ -51,6 +51,7 @@ a:hover,
 a:focus {
   color: #cc6540;
   text-decoration: underline;
+  opacity: 0.8;
 }
 
 .active {
@@ -110,11 +111,11 @@ a:focus {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 300px;
 }
 
 #work .row {
-  padding-bottom: 25px; border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 25px;
 }
 
 #hero {
@@ -138,6 +139,7 @@ nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.25em;
   color: #4a4a4a;
 }
 
@@ -151,9 +153,9 @@ ul >li {
 }
 
 /* ==============================
-Medium devices (1000px and larger)
+Medium devices (668px and larger)
 ================================= */
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 667px) {
 
 header {
   text-align: unset;
@@ -172,6 +174,12 @@ nav {
   width: 99%;
   margin-left: 1%;
 }
+
+.col-md-8 {
+  width: 66%;
+  margin-left: 1%;
+}
+
 .col-md-6 {
   width: 49%;
   margin-left: 1%;
