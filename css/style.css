@@ -1,7 +1,13 @@
 header {
+  text-align: unset;
   padding: 10px;
   margin: 10px;
-  text-align: center;
+}
+
+nav {
+     width: auto;
+     float: right;
+     margin-top: 4px;
 }
 
 body {
@@ -124,8 +130,13 @@ a:focus {
 }
 
 nav > ul {
+  margin: 1em 0;
+}
+
+nav > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav > ul > li {
@@ -139,9 +150,17 @@ nav > ul > li > a {
   color: #4a4a4a;
 }
 
+.navtoggle li:not(:last-child) {
+display: none;
+}
+
 ul >li {
   margin-left: -20px;
   padding: 0;
+}
+
+main {
+  padding-top: 56px;
 }
 
 * {
@@ -159,7 +178,7 @@ ul >li {
   animation-timing-function: linear;
 }
 
-/* Nagivation Animation */
+/* Nagivation Animation
 
 nav {
 	margin: 27px auto 0;
@@ -215,12 +234,55 @@ nav .start-contact, a:nth-child(3):hover~.animation {
 	width: 100px;
 	left: 210px;
 	background-color: #5fd2cd;
-}
+}*/
 
 /* ==============================
-Medium devices (1023px and larger)
+Small devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 641px) {
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  .navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+  .navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+.navtoggle li:last-child {
+  display: none;
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+
+
+
+/* ==============================
+Medium devices (800px and larger)
+================================= */
+@media only screen and (min-width: 800px) {
 
 header {
   text-align: unset;
@@ -267,9 +329,9 @@ nav {
 
 
 /* ==============================
-Large devices (1024px or larger)
+Large devices (1080px or larger)
 ================================= */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1080px) {
 }
 
 header {
