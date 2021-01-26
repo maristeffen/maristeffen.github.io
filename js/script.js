@@ -1,5 +1,3 @@
-console.log("Thanks for visiting my portfolio!")
-
 function myFunction() {
   var x = document.getElementById('myNavtoggle');
   if (x.className === 'navtoggle') {
