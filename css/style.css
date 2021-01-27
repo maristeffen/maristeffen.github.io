@@ -62,39 +62,32 @@ a:active {
 
 .button {
   display: inline-block;
-  background-color: #ff7f50;
+  background-color: #9933cc;
   color: #ffffff;
   font-weight: 400;
   padding: 3px 6px 3px 6px;
   border-radius: 3px;
-  transition-duration: 0.2s;
-  transition-property: opacity;
 }
 
-.button:hover {
-  opacity: 0.8;
-}
 
 .button:hover, .button:focus {
   display: inline-block;
-  background-color: #ff7f50;
+  background-color: #a844e2;
   color: #ffffff;
   font-weight: 400;
   padding: 3px 6px 3px 6px;
   border-radius: 3px;
   text-decoration: none;
-  transition: 0.2s opacity;
 }
 
 .button.contact {
   background-color: transparent;
-  color: #ff7f50;
+  color: #883acc;
   text-transform: uppercase;
-  border: 2px solid #ff7f50;
 }
 
 .button.contact:hover, .button.contact:focus {
-  background-color: #ff7f50;
+  background-color: #a844e2;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration-line: none;
@@ -256,44 +249,12 @@ nav .start-contact, a:nth-child(3):hover~.animation {
 	background-color: #5fd2cd;
 }*/
 /* ==============================
-Small devices (421px and larger)
+Small devices (641px and larger)
 ================================= */
-@media only screen and (min-width: 375px max-width: 767px) {
+@media only screen and (min-width: 641px) {
   .navtoggle, .navtoggle.responsive {
     position: relative;
   }
-
-h1, h2, h3 {
-  line-height: 1.8;
-}
-
-h1 {
-  font-size: 2.25em;
-  font-weight: 700;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.5em;
-  font-weight: 700;
-  text-align: center;
-}
-
-h3 {
-  font-size: 1.25em;
-  font-weight: 700;
-}
-
-h4 {
-  font-size: 1.0em;
-  font-weight: 700;
-  margin-bottom: -12px;
-  line-height: 1.2em;
-}	
-	
-.logo {
-  max-width: 250px;
-}
 
   .navtoggle li .icon {
     position: absolute;
@@ -330,9 +291,9 @@ h4 {
 }
 
 /* ==============================
-Medium devices (768px and larger)
+Medium devices (800px and larger)
 ================================= */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 800px) {
   .navtoggle li:first-child {
     display: none;
   }
