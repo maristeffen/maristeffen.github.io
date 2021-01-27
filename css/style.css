@@ -258,10 +258,42 @@ nav .start-contact, a:nth-child(3):hover~.animation {
 /* ==============================
 Small devices (421px and larger)
 ================================= */
-@media only screen and (min-width: 421px max-width: 767px) {
+@media only screen and (min-width: 375px max-width: 767px) {
   .navtoggle, .navtoggle.responsive {
     position: relative;
   }
+
+h1, h2, h3 {
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.0em;
+  font-weight: 700;
+  margin-bottom: -12px;
+  line-height: 1.2em;
+}	
+	
+.logo {
+  max-width: 250px;
+}
 
   .navtoggle li .icon {
     position: absolute;
@@ -298,9 +330,9 @@ Small devices (421px and larger)
 }
 
 /* ==============================
-Medium devices (800px and larger)
+Medium devices (768px and larger)
 ================================= */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 768px) {
   .navtoggle li:first-child {
     display: none;
   }
