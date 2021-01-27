@@ -256,9 +256,9 @@ nav .start-contact, a:nth-child(3):hover~.animation {
 	background-color: #5fd2cd;
 }*/
 /* ==============================
-Small devices (374px and larger)
+Small devices (421px and larger)
 ================================= */
-@media only screen and (min-width: 374px max-width: 799px) {
+@media only screen and (min-width: 421px max-width: 767px) {
   .navtoggle, .navtoggle.responsive {
     position: relative;
   }
