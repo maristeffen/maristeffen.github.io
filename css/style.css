@@ -133,6 +133,7 @@ a:focus {
 
 nav > ul {
   list-style-type: none;
+  align: center;
   padding: 0;
 }
 
