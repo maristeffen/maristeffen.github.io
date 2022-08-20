@@ -159,6 +159,60 @@ ul >li {
 }
 
 /* ==============================
+Small devices (360px and larger)
+================================= */
+@media only screen and (min-width: 360px) {
+
+header {
+  text-align: unset;
+  padding: 10px;
+  margin: 10px;
+}
+
+nav {
+     width: auto;
+     margin-top: 4px;
+}
+
+
+.col-md-12 {
+  width: 99%;
+  margin-left: 1%;
+}
+
+.col-md-8 {
+  width: 66%;
+  margin-left: 1%;
+}
+
+.col-md-6 {
+  width: 49%;
+  margin-left: 1%;
+}
+
+.col-md-3 {
+  width: 32%;
+  margin-left: 1%;
+}
+.col-md-4 {
+  width: 24%;
+  margin-left: 1%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+  
+/* ==============================
 Medium devices (668px and larger)
 ================================= */
 @media only screen and (min-width: 667px) {
