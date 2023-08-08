@@ -106,7 +106,7 @@
 
             function login(secret) {
                 var hash = sha1(secret)
-                var url = /6b0d31c0d563223024da45691584643ac78c96e8/work.html
+                var url = hash + "/index.html"
                 var alert = document.querySelectorAll('[data-id="alert"]')
 
                 var request = new XMLHttpRequest()
