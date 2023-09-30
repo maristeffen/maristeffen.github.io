@@ -1,146 +1,69 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Password Protected</title>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title>About Mari</title>-->
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>  <img align="center" class=logo src="./img/mari-logo.png"></h1>
+         <!-- <nav>
+          <ul>
+            <li><a class="active" href="./index.html">Resume</a></li>
+             <li><a href="./projects.html">Work</a></li>
+          </ul>
+            </nav>-->
+      </header>
+    <main>
+      <div>
+<!--        <div>
+          <h1>About</h1>
+        </div>-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+        <picture>
+          <source srcset="img/msteffen.jpg" media="(max-width:367px)">
+          <img src="img/msteffen.jpg" alt="Photo of Mari">
+        </picture>
+        <p>UI/UX Designer experienced in designing innovative, multi-platform experiences. Maker and curious world observer.
+        </p>
+</div>
+          Facebook
+Product Designer | March 2022 - April 2023
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="robots" content="noindex, nofollow">
+I was one of two designers tasked with designing and launching the MVP for Facebook audio channels, which are virtual meeting spaces for Facebook group members to talk about shared interests.
 
-        <style>
-            *,
-            *:after,
-            *:before {
-                box-sizing: border-box;
-            }
-            body,
-            html {
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 300;
-                font-size: 16px;
-                background: #f2f2f2;
-                color: #2D3737;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100%;
-            }
+During the ideation phase of the project, I conducted an end-to-end audit of Rooms, Facebook’s existing group calling feature, to better understand how to:
 
-            .protected {
-                background: #fff;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                border-radius: 3px;
-                min-width: 500px;
+achieve parity across mobile and web
+align the new audio channels creation with the existing Room creation flow
+reduce friction for admins when creating audio channels for the first time
+Discovery
+I organized a cross-functional brainstorm across the team to gain new perspectives on how we might convey audio channels. Eight people joined across various different roles, and we had a great conversation about focusing on our users’ needs and and realization that we needed to convey group audio channels as a space to connect people through shared interests.
 
-            }
-            .protected__content {
-                padding: 24px 28px;
-            }
-            .protected__content__heading {
-                font-size: 16px;
-                font-weight: 500;
-                margin: 0 0 12px;
-                line-height: 1;
-            }
-            .protected__alert {
-                display: none;
-                border-bottom: 1px solid transparent;
-                border-radius: 3px 3px 0 0;
-                padding: 12px 14px;
-                color: #a94442;
-                background-color: #f2dede;
-                border-color: #ebccd1;
-            }
-            .protected__content__input {
-                display: block;
-                border: solid 1px #ccc;
-                padding: 12px 14px;
-                -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
-                font-size: 16px;
-                width: 100%;
-                border-radius: 3px;
 
-                margin-bottom: 12px;
-            }
-            .protected__content__input:focus {
-                outline: none;
-                border-color: #228843;
-            }
-            .protected__content__btn {
-                background-color: #228843;
-                border-radius: 3px;
-                cursor: pointer;
-                border: none;
-                color: #fff;
-                padding: 12px 14px;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
+I put these ideas together in a request for an illustration, and after cycles of feedback and iterations, the visual design team created this image that successfully conveys the possibilities of audio channels as a virtual space for anything from talking about shared interests to planning social activities in real life.
 
-            }
-            .protected__content__btn:hover {
-                background-color: #1C6D36;
-            }
 
-        </style>
+Wireframes
+Through several iterations of sketching, wireframing, and collaborating with engineers, the following pieces came into place. Many factors were taken into consideration, from how to translate the list of participants to a larger screen, to navigating design constraints across multiple levels of cross-team collaboration.
 
-    </head>
 
-    <body>
 
-        <div class="protected">
-            <div class="protected__alert" data-id="alert">You entered the wrong password</div>
-            <div class="protected__content">
-                <h1 class="protected__content__heading">Enter a password to view my case studies</h1>
-                <input class="protected__content__input" data-id="password" type="password" placeholder="password"/>
-                <button data-id="button" type="button" class="protected__content__btn">Continue</button>
-            </div>
-        </div>
-
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js"></script>
-        <script type="text/javascript">
-            "use strict"
-            var button = document.querySelectorAll('[data-id="button"]')
-            var password = document.querySelectorAll('[data-id="password"]')
-
-            function login(secret) {
-                var hash = sha1(secret)
-                var url = hash + "/index.html"
-                var alert = document.querySelectorAll('[data-id="alert"]')
-
-                var request = new XMLHttpRequest()
-                request.open('GET', url, true)
-
-                request.onload = function () {
-                    if (request.status >= 200 && request.status < 400) {
-                        window.location = url
-                    } else {
-                        parent.location.hash = hash
-                        alert[0].style.display = 'block'
-                        password[0].setAttribute('placeholder', 'Incorrect password')
-                        password[0].value = ''
-                    }
-                }
-                request.onerror = function () {
-                    parent.location.hash = hash
-                    alert[0].style.display = 'block'
-                    password[0].setAttribute('placeholder', 'Incorrect password')
-                    password[0].value = ''
-                }
-                request.send()
-            }
-
-            button[0].addEventListener("click", function () {
-                login(password[0].value)
-            })
-
-            document.onkeydown = function (e) {
-                e = e || window.event
-                if (e.keyCode == 13) {
-                    login(password[0].value)
-                }
-            }
-        </script>
-    </body>
+Launch & Feedback
+Following our public launch in July across both Facebook and Messenger, audio channels received positive feedback from admins of large Facebook groups. Our team worked on building out features to enable scheduling, sharing, and increase discoverability.
+<!--     <a href="https://www.linkedin.com/in/maristeffen/" target="_blank">
+            <svg height="48px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#007AB9;"/></svg></a>-->
+      </div>
+    <div>
+    <p align="center">© Mari Steffen 2023</p>
+    </div>
+    </footer>
+  </body>
 </html>
